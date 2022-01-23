@@ -1,0 +1,22 @@
+.background-music-container {
+    position: absolute;
+}
+
+.background-music-container .music-mute-button {
+    position: fixed;
+    bottom: 8%;
+    left: 2%;  
+    z-index: 100000;
+    width: 35px;
+    height: 35px;
+    background-color: rgb(235, 235, 235);
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.background-music-container .music-mute-button i {
+    font-size: 18px;
+    color: rgb(46, 46, 46);
+}
