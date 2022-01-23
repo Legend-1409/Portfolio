@@ -9,26 +9,53 @@ body {
     height: 100vh;
 }
 
-.login-background {
+/* Intro Section */
+
+#login-intro-section {
     width: 100%;
     height: 100%;
-    background-color: black;
+}
+#login-intro-section .login-background {
+    width: 100%;
+    height: 100%;
+    background-color: #091921;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.login-background h1 {
-    font-size: 50px;
+#login-intro-section .login-background h1 {
+    font-size: 60px;
     color: white;
+}
+
+#login-intro-section .login-background h1.zoomOut {
     animation: zoomOut 2.5s ease-in-out 1 forwards;
 }
 
+#login-intro-section .login-background h1.zoomIn {
+    animation: zoomIn 2.5s ease-in-out 1 forwards;
+}
+
+.invisible {
+    display: none;
+}
+
+
 @keyframes zoomOut {
     0% {
-        font-size: 50px;
+        font-size: 60px;
     }
     100% {
         font-size: 40px;
+    }
+}
+
+@keyframes zoomIn {
+    0% {
+        font-size: 40px;
+    }
+    100% {
+        font-size: 60px;
     }
 }
