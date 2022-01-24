@@ -1,0 +1,436 @@
+/* * {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+} */
+
+:root {
+  /* --navbarColor: white; */
+  --htmlSkill: 95%;
+  --cssSkill: 85%;
+  --jsSkill: 80%;
+  --cppSkill: 80%;
+  --pythonSkill: 40%;
+}
+
+/* body {
+    background-color: black;
+  } */
+  
+  #skills-section {
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    font-family: "Roboto", sans-serif;
+    overflow: hidden;
+  }
+  
+  #skills-section .skills-info-div {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    overflow: hidden;
+  }
+
+  #skills-section .skills-info-div .navbar {
+    z-index: 100;
+  }
+
+  #skills-section .skills-info-div .skills-info-container {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    overflow: hidden;
+  }
+
+  #skills-section .skills-info-div .skills-info-container .skills-dust-background{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    opacity: 0;
+    animation: skillsVideoSlideLeft 2s cubic-bezier(0.165, 0.64, 0.6, 1)  forwards;
+  }
+
+  #skills-section .skills-info-div .skills-info-container .skills-dust-background video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  #skills-section .skills-info-container .my-skill-h1
+  {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  
+  #skills-section .skills-info-container .my-skill-h1 h1 {
+    opacity: 0;
+    color: white;
+    font-size: 100px;
+    animation: skillsVideoSlideLeft 2s cubic-bezier(0.165, 0.64, 0.6, 1) 0.2s forwards;
+  }
+
+  @keyframes skillsVideoSlideLeft {
+    0% {
+      opacity: 0;
+      transform: translate3d(+100%,0,0);
+    }
+    100% {
+      opacity: 1;
+      transform: translate3d(0,0,0);
+    }
+  }
+  
+  #skills-section .scroll-click {
+    position: absolute;
+    left: 50%;
+    bottom: 30px;
+    cursor: pointer;
+  }
+  
+  #skills-section .scroll-click i {
+    color: rgb(255, 255, 255);
+    opacity: 0;
+    font-size: 30px;
+    animation: skillsScrollUpDown 3s 2.3s infinite;
+  }
+  
+  @keyframes skillsScrollUpDown {
+    0% {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+    50% {
+      opacity: 0.5;
+      transform: translateY(10px);
+    }
+  
+    100% {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+  }
+  
+  #skills-section .skills-info-container.active {
+    box-shadow: 0 0 100px 20px black;
+    animation: slideDownAboutInfo 1.5s forwards;
+  }
+  
+  @keyframes slideDownAboutInfo {
+    0% {
+      transform: translateY(0px);
+    }
+  
+    100% {
+      transform: translateY(150%);
+    }
+  }
+  
+  #skills-section .skills-details-div {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 0 70px;
+  }
+
+  #skills-section .skills-details-div .skills-top-heading-div {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: topHeadingDivSlideBottom 1s linear 1s forwards;
+  }
+
+  #skills-section .skills-details-div .skills-top-heading-div h1 {
+    font-size: 35px;
+    font-weight: 500;
+  }
+
+  @keyframes topHeadingDivSlideBottom {
+    0% {
+      opacity: 0;
+      transform: translate3d(0,-100%,0);
+    }
+    100% {
+      opacity: 1;
+      transform: translate3d(0,0,0);
+    }
+  }
+
+  #skills-section .skills-details-div .skills-chart-div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    min-height: 50%;
+  }
+
+  #skills-section .skills-details-div .skills-chart-div .software-skill, .personal-skill {
+    width: 50%;
+    height: 100%;
+  }
+
+  #skills-section .skills-details-div .skills-chart-div .software-skill {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    opacity: 0;
+    animation: softwareSkillSlideRight 1s linear 1s   forwards;
+  }
+
+  @keyframes softwareSkillSlideRight {
+    0% {
+      opacity: 0;
+      transform: translate3d(-100%,0,0);
+
+    }
+    100% {
+      opacity: 1;
+      transform: translate3d(0,0,0);
+
+    }
+    
+  }
+
+  #skills-section .skills-details-div .skills-chart-div  h3{
+    font-size: 28px;
+    opacity: 0.8;
+    font-weight: 500;
+  }
+
+  #skills-section .skills-details-div .skills-chart-div .software-skill-chart-div {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  #skills-section .skills-details-div .skills-chart-div .software-skill-chart-div .software-skill-number {
+    margin: 10px 0;
+    width: 70%;
+  }
+
+  #skills-section .skills-details-div .skills-chart-div .software-skill-chart-div .software-skill-number h5 {
+    font-size: 18px;
+    opacity: 0.6;
+    font-weight: 400;
+  }
+
+  #skills-section .skills-details-div .skills-chart-div .software-skill-chart-div .software-skill-number .software-skill-progress-bar-outer {
+    margin-top: 5px;
+    width: 100%;
+    height: 3px;
+    background-color: rgb(177, 176, 176);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+
+  #skills-section .skills-chart-div .software-skill-chart-div .software-skill-number .software-skill-progress-bar-inner {
+    width: 0;
+    height: 100%;
+    background-color: black;
+  }
+
+  #skills-section .skills-chart-div .software-skill-chart-div .software-skill-number:nth-child(1) .software-skill-progress-bar-inner {
+    animation: softwareSkillProgressBar1 2.5s 1.2s linear forwards;
+  }
+
+  @keyframes softwareSkillProgressBar1 {
+    0%{
+      width: 0%;
+    }
+    100%{
+      width: var(--htmlSkill);
+    }
+  }
+
+  #skills-section .skills-chart-div .software-skill-chart-div .software-skill-number:nth-child(2) .software-skill-progress-bar-inner {
+    animation: softwareSkillProgressBar2 2.5s 1.3s linear forwards;
+  }
+
+  @keyframes softwareSkillProgressBar2 {
+    0%{
+      width: 0%;
+    }
+    100%{
+      width: var(--cssSkill);
+    }
+  }
+
+  #skills-section .skills-chart-div .software-skill-chart-div .software-skill-number:nth-child(3) .software-skill-progress-bar-inner {
+    animation: softwareSkillProgressBar3 2.5s 1.4s linear forwards;
+  }
+
+  @keyframes softwareSkillProgressBar3 {
+    0%{
+      width: 0%;
+    }
+    100%{
+      width: var(--jsSkill);
+    }
+  }
+
+  #skills-section .skills-chart-div .software-skill-chart-div .software-skill-number:nth-child(4) .software-skill-progress-bar-inner {
+    animation: softwareSkillProgressBar4 2.5s 1.5s linear forwards;
+  }
+
+  @keyframes softwareSkillProgressBar4 {
+    0%{
+      width: 0%;
+    }
+    100%{
+      width: var(--cppSkill);
+    }
+  }
+
+  #skills-section .skills-chart-div .software-skill-chart-div .software-skill-number:nth-child(5) .software-skill-progress-bar-inner {
+    animation: softwareSkillProgressBar5 2.5s 1.6s linear forwards;
+  }
+
+  @keyframes softwareSkillProgressBar5 {
+    0%{
+      width: 0%;
+    }
+    100%{
+      width: var(--pythonSkill);
+    }
+  }
+
+  #skills-section .skills-details-div .skills-chart-div .personal-skill {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; 
+    opacity: 0;
+    animation: personalSkillSlideLeft 1s linear 1s   forwards;
+  }
+
+  @keyframes personalSkillSlideLeft {
+    0% {
+      opacity: 0;
+      transform: translate3d(+100%,0,0);
+
+    }
+    100% {
+      opacity: 1;
+      transform: translate3d(0,0,0);
+
+    }
+    
+  }
+
+  #skills-section .skills-details-div .skills-chart-div .personal-skill .personal-skill-chart-div {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 50px;
+  }
+
+  #skills-section .skills-details-div .skills-chart-div .personal-skill .personal-skill-number {
+    margin-left: 40px;
+  }
+
+  #skills-section .skills-details-div .skills-chart-div .personal-skill .circle-wrap {
+    width: 100px;
+    height: 100px;
+    background: rgb(177, 176, 176);
+    border-radius: 50%;
+    margin: auto;
+  }
+  
+  #skills-section .skills-details-div .skills-chart-div .personal-skill .circle-wrap .circle .mask,
+  #skills-section .skills-details-div .skills-chart-div .personal-skill .circle-wrap .circle .fill {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    border-radius: 50%;
+  }
+  
+  #skills-section .skills-details-div .skills-chart-div .personal-skill .circle-wrap .circle .mask {
+    clip: rect(0px, 100px, 100px, 50px);
+  }
+  
+  #skills-section .skills-details-div .skills-chart-div .personal-skill .circle-wrap .inside-circle {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background: #ffffff;
+    line-height: 92px;
+    margin-top: 5px;
+    margin-left: 5px;
+    text-align: center;
+    color: black;
+    position: absolute;
+    z-index: 10;
+    font-size: 23px;
+  }
+  
+  #skills-section .skills-details-div .skills-chart-div .personal-skill .mask .fill {
+    clip: rect(0px, 50px, 100px, 0px);
+    background-color: black;
+  }
+  
+  #skills-section .skills-details-div .skills-chart-div .personal-skill .personal-skill-number-1 .mask.full,
+  #skills-section .skills-details-div .skills-chart-div .personal-skill .personal-skill-number-1 .circle .fill {
+    animation: personalSkillBar1 ease-in-out 3s 1.2s forwards;
+  }
+  
+  @keyframes personalSkillBar1{
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(153deg);
+    }
+  }
+
+  #skills-section .skills-details-div .skills-chart-div .personal-skill .personal-skill-number-2 .mask.full,
+  #skills-section .skills-details-div .skills-chart-div .personal-skill .personal-skill-number-2 .circle .fill {
+    animation: personalSkillBar2 ease-in-out 3s 1.4s forwards;
+  }
+  
+  @keyframes personalSkillBar2{
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(162deg);
+    }
+  }
+
+  #skills-section .skills-details-div .skills-chart-div .personal-skill .personal-skill-number-3 .mask.full,
+  #skills-section .skills-details-div .skills-chart-div .personal-skill .personal-skill-number-3 .circle .fill {
+    animation: personalSkillBar3 ease-in-out 3s 1.6s forwards;
+  }
+  
+  @keyframes personalSkillBar3{
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(126deg);
+    }
+  }
+
+
+  #skills-section .skills-chart-div .personal-skill .personal-skill-bar-topic {
+    margin-top: 20px;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 18px;
+    font-weight: 400;
+  }
