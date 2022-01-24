@@ -38,7 +38,7 @@
 }
 
 /* Intro section navbar */
-#intro-section .navbar {
+.navbar {
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -46,25 +46,25 @@
   position: fixed;
 }
 
-#intro-section .navbar-left {
+.navbar-left {
   margin-left: 5%;
 }
 
-#intro-section .navbar-left a {
+.navbar-left a {
   color: var(--navbarColor);
   text-decoration: none;
   font-size: 30px;
   font-weight: 500;
 }
 
-#intro-section .navbar-right {
+.navbar-right {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 40px 50px;
 }
 
-#intro-section .navbar-right .navbar-list {
+.navbar-right .navbar-list {
   margin-right: 30px;
   display: flex;
   flex-direction: column;
@@ -72,14 +72,14 @@
   align-items: center;
 }
 
-#intro-section .navbar-right .navbar-list a {
+.navbar-right .navbar-list a {
   color: var(--navbarColor);
   text-decoration: none;
   font-size: 20px;
   font-weight: 400;
 }
 
-#intro-section .navbar-right .navbar-list hr {
+.navbar-right .navbar-list hr {
   margin-top: 3px;
   width: 0%;
   height: 2px;
@@ -90,11 +90,11 @@
   transition: width 0.3s ease-in-out;
 }
 
-#intro-section .navbar-right .navbar-list.active hr {
+.navbar-right .navbar-list.active hr {
   width: 100%;
 }
 
-#intro-section .navbar-right .navbar-list:hover hr {
+.navbar-right .navbar-list:hover hr {
   width: 100%;
 }
 

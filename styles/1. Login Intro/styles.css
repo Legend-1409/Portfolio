@@ -38,7 +38,7 @@ body {
 }
 
 .invisible {
-    display: none;
+    display: none !important;
 }
 
 
@@ -57,5 +57,25 @@ body {
     }
     100% {
         font-size: 60px;
+    }
+}
+
+#login-intro-section.page-transition {
+    position: absolute;
+    z-index: 1;
+    animation: fadeInPage 2s ease-in-out    forwards;
+}
+
+@keyframes fadeInPage {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    40% {
+        transform: scale(0.7);
+        opacity: 0;
+    }
+    100% {
+        z-index: -5;
     }
 }
