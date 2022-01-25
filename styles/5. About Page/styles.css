@@ -1,13 +1,3 @@
-/* * {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-} */
-
-/* :root {
-  --navbarColor: rgb(27, 27, 27);
-} */
-
 body {
   background-color: black;
 }
@@ -24,7 +14,6 @@ body {
   height: 100%;
   background-color: rgb(250, 250, 250);
   position: absolute;
-  /* top:-100%; */
   transform: translateY(-100%);
   animation: pageSlideDown 1s cubic-bezier(0.165, 0.64, 0.6, 1) forwards;
 }
@@ -32,11 +21,9 @@ body {
 @keyframes pageSlideDown {
   0% {
     transform: translateY(-100%);
-    /* top : -100%; */
   }
   100% {
     transform: translateY(0);
-    /* top: 0%; */
   }
 }
 
@@ -52,6 +39,7 @@ body {
 #about-me-section .about-info-container .about-me-h1 h1 {
   font-size: 90px;
   opacity: 0.8;
+  text-align: center;
 }
 
 #about-me-section .about-info-container .about-me-h1.animate {
@@ -62,9 +50,20 @@ body {
 }
 
 #about-me-section .about-info-container .about-A-background {
+  width: 100%;
+  height: 100%;
   position: absolute;
-  z-index: 0;
-  overflow: hidden;
+  z-index: -1;
+}
+
+#about-me-section .about-info-container .about-A-background img{
+  position: absolute;
+  z-index: -2;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  object-fit: cover; 
 }
 
 #about-me-section .about-info-container .about-A-background.animate {
@@ -74,13 +73,6 @@ body {
     forwards;
 }
 
-#about-me-section .about-info-container .about-A-background span {
-  display: inline-block;
-  max-height: 80%;
-  font-size: 35rem;
-  opacity: 0.03;
-  font-weight: 900;
-}
 
 @keyframes aboutMeSlideDown {
   0% {
