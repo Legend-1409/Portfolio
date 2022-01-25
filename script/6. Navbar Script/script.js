@@ -3,6 +3,44 @@ let aboutMeSection1 = document.querySelector('#about-me-section');
 let skillsSection1 = document.querySelector('#skills-section');
 let hobbiesSection1 = document.querySelector('#hobbies-section');
 
+function homePageArrive() {
+    document.documentElement.style.setProperty('--navbarColor', 'white');
+    aboutMeSection1.classList.add('invisible');
+    skillsSection1.classList.add('invisible');
+    hobbiesSection1.classList.add('invisible');
+    introSection1.classList.remove('invisible');
+}
+
+function aboutPageArrive() {
+    document.documentElement.style.setProperty('--navbarColor', 'rgb(27, 27, 27)');
+    introSection1.classList.add('invisible');
+    skillsSection1.classList.add('invisible');
+    hobbiesSection1.classList.add('invisible');
+    aboutInfoContainer.classList.remove('invisible');
+    aboutDetailsDiv.classList.add('invisible');
+    aboutMeSection1.classList.remove('invisible');
+}
+
+function hobbiesPageArrive() {
+    document.documentElement.style.setProperty('--navbarColor', 'white');
+    introSection1.classList.add('invisible');
+    skillsSection1.classList.add('invisible');
+    aboutMeSection1.classList.add('invisible');
+    hobbiesInfoContainer.classList.remove('invisible');
+    hobbiesDetailsDiv.classList.add('invisible');
+    hobbiesSection1.classList.remove('invisible');
+}
+
+function skillsPageArrive() {
+    document.documentElement.style.setProperty('--navbarColor', 'white');
+    introSection1.classList.add('invisible');
+    aboutMeSection1.classList.add('invisible');
+    hobbiesSection1.classList.add('invisible');
+    skillInfoContainer.classList.remove('invisible');
+    skillDetailsDiv.classList.add('invisible');
+    skillsSection1.classList.remove('invisible');
+}
+
 // For Home Page Navbar
 let homePageNavbarSection = introSection1.querySelector('.navbar');
 let homePageNavbarHome = homePageNavbarSection.querySelector('.navbar-home');
@@ -12,39 +50,22 @@ let homePageNavbarSkills = homePageNavbarSection.querySelector('.navbar-skills')
 
 homePageNavbarHome.addEventListener('click', (e)=> {
     e.preventDefault();
-    document.documentElement.style.setProperty('--navbarColor', 'white');
-    introSection1.classList.remove('invisible');
-    aboutMeSection1.classList.add('invisible');
+    homePageArrive();
 });
 
 homePageNavbarAbout.addEventListener('click', (e)=>{
     e.preventDefault();
-    document.documentElement.style.setProperty('--navbarColor', 'rgb(27, 27, 27)');
-    introSection1.classList.add('invisible');
-    aboutInfoContainer.classList.remove('invisible');
-    aboutDetailsDiv.classList.add('invisible');
-    aboutMeSection1.classList.remove('invisible');
+    aboutPageArrive();
 });
 
 homePageNavbarHobbies.addEventListener('click', (e)=>{
     e.preventDefault();
-    document.documentElement.style.setProperty('--navbarColor', 'white');
-    introSection1.classList.add('invisible');
-    skillsSection1.classList.add('invisible');
-    aboutMeSection1.classList.add('invisible');
-    hobbiesInfoContainer.classList.remove('invisible');
-    hobbiesDetailsDiv.classList.add('invisible');
-    hobbiesSection1.classList.remove('invisible');
+    hobbiesPageArrive()
 });
 
 homePageNavbarSkills.addEventListener('click', (e)=>{
     e.preventDefault();
-    document.documentElement.style.setProperty('--navbarColor', 'white');
-    introSection1.classList.add('invisible');
-    aboutMeSection1.classList.add('invisible');
-    skillInfoContainer.classList.remove('invisible');
-    skillDetailsDiv.classList.add('invisible');
-    skillsSection1.classList.remove('invisible');
+    skillsPageArrive();
 });
 
 
@@ -57,44 +78,22 @@ let aboutPageNavbarSkills = aboutPageNavbarSection.querySelector('.navbar-skills
 
 aboutPageNavbarHome.addEventListener('click', (e)=> {
     e.preventDefault();
-    document.documentElement.style.setProperty('--navbarColor', 'white');
-    aboutMeSection1.classList.add('invisible');
-    skillsSection1.classList.add('invisible');
-    hobbiesSection1.classList.add('invisible');
-    introSection1.classList.remove('invisible');
+    homePageArrive()
 });
 
 aboutPageNavbarAbout.addEventListener('click', (e)=>{
     e.preventDefault();
-    document.documentElement.style.setProperty('--navbarColor', 'rgb(27, 27, 27)');
-    introSection1.classList.add('invisible');
-    skillsSection1.classList.add('invisible');
-    hobbiesSection1.classList.add('invisible');
-    aboutInfoContainer.classList.remove('invisible');
-    aboutDetailsDiv.classList.add('invisible');
-    aboutMeSection1.classList.remove('invisible');
-});
+    aboutPageArrive()
+}); 
 
 aboutPageNavbarHobbies.addEventListener('click', (e)=>{
     e.preventDefault();
-    document.documentElement.style.setProperty('--navbarColor', 'white');
-    introSection1.classList.add('invisible');
-    skillsSection1.classList.add('invisible');
-    aboutMeSection1.classList.add('invisible');
-    hobbiesInfoContainer.classList.remove('invisible');
-    hobbiesDetailsDiv.classList.add('invisible');
-    hobbiesSection1.classList.remove('invisible');
+    hobbiesPageArrive()
 });
 
 aboutPageNavbarSkills.addEventListener('click', (e)=>{
     e.preventDefault();
-    document.documentElement.style.setProperty('--navbarColor', 'white');
-    introSection1.classList.add('invisible');
-    aboutMeSection1.classList.add('invisible');
-    hobbiesSection1.classList.add('invisible');
-    skillInfoContainer.classList.remove('invisible');
-    skillDetailsDiv.classList.add('invisible');
-    skillsSection1.classList.remove('invisible');
+    skillsPageArrive();
 });
 
 // For Skills Page Navbar
@@ -106,45 +105,22 @@ let skillPageNavbarSkills = skillPageNavbarSection.querySelector('.navbar-skills
 
 skillPageNavbarHome.addEventListener('click', (e)=> {
     e.preventDefault();
-    document.documentElement.style.setProperty('--navbarColor', 'white');
-    aboutMeSection1.classList.add('invisible');
-    skillsSection1.classList.add('invisible');
-    hobbiesSection1.classList.add('invisible');
-    introSection1.classList.remove('invisible');
+   homePageArrive(); 
 });
 
 skillPageNavbarAbout.addEventListener('click', (e)=>{
     e.preventDefault();
-    document.documentElement.style.setProperty('--navbarColor', 'rgb(27, 27, 27)');
-    introSection1.classList.add('invisible');
-    skillsSection1.classList.add('invisible');
-    hobbiesSection1.classList.add('invisible');
-    aboutInfoContainer.classList.remove('invisible');
-    aboutDetailsDiv.classList.add('invisible');
-    aboutMeSection1.classList.remove('invisible');
+    aboutPageArrive();
 });
 
 skillPageNavbarHobbies.addEventListener('click', (e)=>{
     e.preventDefault();
-    document.documentElement.style.setProperty('--navbarColor', 'white');
-    introSection1.classList.add('invisible');
-    skillsSection1.classList.add('invisible');
-    aboutMeSection1.classList.add('invisible');
-    hobbiesInfoContainer.classList.remove('invisible');
-    hobbiesDetailsDiv.classList.add('invisible');
-    hobbiesSection1.classList.remove('invisible');
-    
+    hobbiesPageArrive();
 });
 
 skillPageNavbarSkills.addEventListener('click', (e)=>{
     e.preventDefault();
-    document.documentElement.style.setProperty('--navbarColor', 'white');
-    introSection1.classList.add('invisible');
-    aboutMeSection1.classList.add('invisible');
-    hobbiesSection1.classList.add('invisible');
-    skillInfoContainer.classList.remove('invisible');
-    skillDetailsDiv.classList.add('invisible');
-    skillsSection1.classList.remove('invisible');
+    skillsPageArrive();
 });
 
 // For Hobbies Page Navbar
@@ -156,42 +132,20 @@ let hobbiesPageNavbarSkills = hobbiesPageNavbarSection.querySelector('.navbar-sk
 
 hobbiesPageNavbarHome.addEventListener('click', (e)=> {
     e.preventDefault();
-    document.documentElement.style.setProperty('--navbarColor', 'white');
-    introSection1.classList.remove('invisible');
-    aboutMeSection1.classList.add('invisible');
-    skillsSection1.classList.add('invisible');
-    hobbiesSection1.classList.add('invisible');
+    homePageArrive();
 });
 
 hobbiesPageNavbarAbout.addEventListener('click', (e)=>{
     e.preventDefault();
-    document.documentElement.style.setProperty('--navbarColor', 'rgb(27, 27, 27)');
-    introSection1.classList.add('invisible');
-    skillsSection1.classList.add('invisible');
-    hobbiesSection1.classList.add('invisible');
-    aboutInfoContainer.classList.remove('invisible');
-    aboutDetailsDiv.classList.add('invisible');
-    aboutMeSection1.classList.remove('invisible');
+    aboutPageArrive(); 
 });
 
 hobbiesPageNavbarHobbies.addEventListener('click', (e)=>{
     e.preventDefault();
-    document.documentElement.style.setProperty('--navbarColor', 'white');
-    introSection1.classList.add('invisible');
-    skillsSection1.classList.add('invisible');
-    aboutMeSection1.classList.add('invisible');
-    hobbiesInfoContainer.classList.remove('invisible');
-    hobbiesDetailsDiv.classList.add('invisible');
-    hobbiesSection1.classList.remove('invisible');
+    hobbiesPageArrive();
 });
 
 hobbiesPageNavbarSkills.addEventListener('click', (e)=>{
     e.preventDefault();
-    document.documentElement.style.setProperty('--navbarColor', 'white');
-    introSection1.classList.add('invisible');
-    aboutMeSection1.classList.add('invisible');
-    hobbiesSection1.classList.add('invisible');
-    skillInfoContainer.classList.remove('invisible');
-    skillDetailsDiv.classList.add('invisible');
-    skillsSection1.classList.remove('invisible');
+    skillsPageArrive();
 });

@@ -9,8 +9,15 @@
 
 
     <!-- Font Awesome CDN -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
-    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+
     <!-- My stylesheet -->
     <link rel="stylesheet" href="styles/1. Login Intro/styles.css">
     <link rel="stylesheet" href="styles/2. Background Music/style.css">
@@ -18,6 +25,7 @@
     <link rel="stylesheet" href="styles/5. About Page/styles.css">
     <link rel="stylesheet" href="styles/6. Skills Page/styles.css">
     <link rel="stylesheet" href="styles/7. Hobbies Page/styles.css">
+    <link rel="stylesheet" href="styles/8. Navabar/styles.css">
 </head>
 
 <body>
@@ -63,25 +71,49 @@
                         <a class="navbar-skills" href="">Skills</a>
                         <hr>
                     </div>
+                    <div class="navbar-burger-div">
+                        <div class="navbar-burger">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mobile-dropdown-div">
+                <div class="mobile-dropdown">
+                    <div class="mobile-dropdown-list"><a class="navbar-home" href="">Home</a></div>
+                    <div class="mobile-dropdown-list"><a class="navbar-about" href="">About</a></div>
+                    <div class="mobile-dropdown-list"><a class="navbar-hobbies" href="">My Hobbies</a></div>
+                    <div class="mobile-dropdown-list"><a class="navbar-skills" href="">Skills</a></div>
                 </div>
             </div>
 
             <div class="overlay"></div>
 
             <div class="info-container">
-                <div class="Hello-div"><h1>hello</h1></div>
+                <div class="Hello-div">
+                    <h1>hello</h1>
+                </div>
                 <div class="my-info-div">
                     <span>I</span>
                     <span>Am</span>
                     <span>Yash</span>
                     <span>Bansal</span>
                 </div>
-                <div class="quality-div"><p>Frontend Developer</p></div>
+                <div class="quality-div">
+                    <p>Frontend Developer</p>
+                </div>
                 <div class="extra-div">
-                    <span><hr></span>
-                    <span><hr></span>
-                    <span><hr></span>
-                    <span><hr></span>
+                    <span>
+                        <hr></span>
+                    <span>
+                        <hr></span>
+                    <span>
+                        <hr></span>
+                    <span>
+                        <hr></span>
                 </div>
             </div>
         </div>
@@ -143,9 +175,12 @@
                         <span>Coder</span>
                     </div>
                     <div class="info-lower-heading-div ">
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta sapiente delectus excepturi non </p>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta sapiente delectus excepturi non </p>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta sapiente delectus excepturi non </p>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta sapiente delectus excepturi
+                            non </p>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta sapiente delectus excepturi
+                            non </p>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta sapiente delectus excepturi
+                            non </p>
                     </div>
                 </div>
             </div>
@@ -258,7 +293,8 @@
                                         <div class="inside-circle">85%</div>
                                     </div>
                                 </div>
-                                <div class="personal-skill-bar-topic"><p>TeamWork</p>
+                                <div class="personal-skill-bar-topic">
+                                    <p>TeamWork</p>
                                 </div>
                             </div>
                             <div class="personal-skill-number personal-skill-number-2">
@@ -273,7 +309,8 @@
                                         <div class="inside-circle">90%</div>
                                     </div>
                                 </div>
-                                <div class="personal-skill-bar-topic"><p>Flexibility</p>
+                                <div class="personal-skill-bar-topic">
+                                    <p>Flexibility</p>
                                 </div>
                             </div>
                             <div class="personal-skill-number personal-skill-number-3">
@@ -288,7 +325,8 @@
                                         <div class="inside-circle">70%</div>
                                     </div>
                                 </div>
-                                <div class="personal-skill-bar-topic"><p>Communication</p>
+                                <div class="personal-skill-bar-topic">
+                                    <p>Communication</p>
                                 </div>
                             </div>
                         </div>
@@ -354,7 +392,8 @@
                     </div>
                     <div class="hobbies-list">
                         <div class="hobbies-image">
-                            <img src="images/3. Hobbies Page/hobbies card/listening music.jpeg" alt="listening music photo">
+                            <img src="images/3. Hobbies Page/hobbies card/listening music.jpeg"
+                                alt="listening music photo">
                         </div>
                         <div class="hobbies-line">
                             <p>Listening Music</p>
@@ -379,6 +418,7 @@
     <script src="script/7. Skills Page/script.js"></script>
     <script src="script/8. Hobbies Page/script.js"></script>
     <script src="script/6. Navbar Script/script.js"></script>
+    <script src="script/9. Mobile Navbar/script.js"></script>
 </body>
 
 </html>

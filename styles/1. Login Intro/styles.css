@@ -30,11 +30,11 @@ body {
 }
 
 #login-intro-section .login-background h1.zoomOut {
-    animation: zoomOut 2.5s ease-in-out 1 forwards;
+    animation: zoomOut 1.5s ease-in-out 1 forwards;
 }
 
 #login-intro-section .login-background h1.zoomIn {
-    animation: zoomIn 2.5s ease-in-out 1 forwards;
+    animation: zoomIn 1.5s ease-in-out 1 forwards;
 }
 
 .invisible {
@@ -63,7 +63,7 @@ body {
 #login-intro-section.page-transition {
     position: absolute;
     z-index: 1;
-    animation: fadeInPage 2s ease-in-out    forwards;
+    animation: fadeInPage 1.5s ease-in-out    forwards;
 }
 
 @keyframes fadeInPage {

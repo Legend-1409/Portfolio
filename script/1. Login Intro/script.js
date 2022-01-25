@@ -11,7 +11,7 @@ let introSection = document.querySelector('#intro-section');
 setTimeout(()=> {
     introText.removeChild(introText.firstElementChild);
     introText.appendChild(h1);
-}, 2500);
+}, 1500);
 
 // For page transition from login-intro to intro section
 setTimeout(()=> {
@@ -20,5 +20,5 @@ setTimeout(()=> {
     setTimeout(()=>{
         loginIntroSection.classList.add('invisible');
         loginIntroSection.classList.remove('page-transition');
-    },2000);
-}, 5000);
+    },1500);
+}, 3000);
