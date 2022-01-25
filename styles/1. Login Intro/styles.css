@@ -79,3 +79,26 @@ body {
         z-index: -5;
     }
 }
+
+@media screen and (max-width: 550px) {
+    #login-intro-section .login-background h1 {
+        font-size: 40px;
+    }
+    @keyframes zoomOut {
+        0% {
+            font-size: 40px;
+        }
+        100% {
+            font-size: 30px;
+        }
+    }
+    
+    @keyframes zoomIn {
+        0% {
+            font-size: 30px;
+        }
+        100% {
+            font-size: 40px;
+        }
+    }
+}
