@@ -1,0 +1,234 @@
+  #hobbies-section {
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    font-family: "Roboto", sans-serif;
+    overflow: hidden;
+  }
+  
+  #hobbies-section .hobbies-info-div {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    overflow: hidden;
+  }
+
+  #hobbies-section .hobbies-info-div .navbar {
+    z-index: 100;
+  }
+
+  #hobbies-section .hobbies-info-div .hobbies-info-container {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    overflow: hidden;
+  }
+
+  #hobbies-section .hobbies-info-div .hobbies-info-container .hobbies-dust-background{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    opacity: 0;
+    animation: hobbiesVideoSlideRight 2s cubic-bezier(0.165, 0.64, 0.6, 1)  forwards;
+  }
+
+  #hobbies-section .hobbies-info-div .hobbies-info-container .hobbies-dust-background video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scaleX(-1);
+  }
+
+  #hobbies-section .hobbies-info-container .my-hobbies-h1
+  {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  
+  #hobbies-section .hobbies-info-container .my-hobbies-h1 h1 {
+    opacity: 0;
+    color: white;
+    font-size: 100px;
+    animation: hobbiesVideoSlideRight 2s cubic-bezier(0.165, 0.64, 0.6, 1) 0.2s forwards;
+  }
+
+  @keyframes hobbiesVideoSlideRight {
+    0% {
+      opacity: 0;
+      transform: translate3d(-100%,0,0);
+    }
+    100% {
+      opacity: 1;
+      transform: translate3d(0,0,0);
+    }
+  }
+  
+  #hobbies-section .scroll-click {
+    position: absolute;
+    left: 50%;
+    bottom: 30px;
+    cursor: pointer;
+  }
+  
+  #hobbies-section .scroll-click i {
+    color: rgb(255, 255, 255);
+    opacity: 0;
+    font-size: 30px;
+    animation: skillsScrollUpDown 3s 2.3s infinite;
+  }
+  
+  @keyframes skillsScrollUpDown {
+    0% {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+    50% {
+      opacity: 0.5;
+      transform: translateY(10px);
+    }
+  
+    100% {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+  }
+  
+  #hobbies-section .hobbies-info-container.active {
+    box-shadow: 0 0 100px 20px black;
+    animation: slideDownAboutInfo 1.5s forwards;
+  }
+  
+  @keyframes slideDownAboutInfo {
+    0% {
+      transform: translateY(0px);
+    }
+  
+    100% {
+      transform: translateY(150%);
+    }
+  }
+  
+  #hobbies-section .hobbies-details-div {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 0 70px; 
+  }
+
+  #hobbies-section .hobbies-details-div .hobbies-background-div {
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    opacity: 0;
+    animation: hobbiesFade 1s ease-in-out 0.7s   forwards;
+  }
+
+  #hobbies-section .hobbies-details-div .hobbies-background-div img {
+    position: absolute;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    opacity: 1;
+  }
+
+  #hobbies-section .hobbies-details-div .hobbies-background-div .image-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #hobbies-section .hobbies-details-div .hobbies-top-heading-div {
+    color: white;
+    width: 100%;
+    /* margin-bottom: 20px; */
+    text-align: center;
+    opacity: 0;
+    animation: topHeadingDivSlideBottom 1s linear 1s forwards;
+  }
+
+  #hobbies-section .hobbies-details-div .hobbies-top-heading-div h1 {
+    font-size: 35px;
+    font-weight: 500;
+  }
+
+  @keyframes topHeadingDivSlideBottom {
+    0% {
+      opacity: 0;
+      transform: translate3d(0,-100%,0);
+    }
+    100% {
+      opacity: 1;
+      transform: translate3d(0,0,0);
+    }
+  }
+
+  #hobbies-section .hobbies-details-div .hobbies-list-div {
+    width: 100%;
+    position: relative;
+    z-index: 5;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 6%;
+    opacity: 0;
+    animation: hobbiesFade 1s ease-in-out 0.7s   forwards;
+  }
+
+  #hobbies-section .hobbies-details-div .hobbies-list-div .hobbies-list{
+    height: 300px;
+    width: 300px;
+    background-color: white;
+    box-shadow: 0px 0px 20px 3px rgb(0, 0, 0, 0.4);
+    border-radius: 5px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  #hobbies-section .hobbies-list-div .hobbies-image {
+    width: 90%;
+    height: 80%;
+    border: 0.5px solid black;
+    overflow: hidden;
+    text-align: center;
+  }
+
+  #hobbies-section .hobbies-list-div .hobbies-image img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+
+  #hobbies-section .hobbies-list-div .hobbies-line p{
+    font-size: 18px;
+    font-weight: 400;
+  }
+
+  @keyframes hobbiesFade {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }

@@ -18,7 +18,7 @@ function progressBarCounter(id, start, end, increment, duration)
             increment = Math.floor(increment / 10);
         }
         current += increment;
-        id.innerHTML = current;
+        id.innerHTML = current + '%';
         if (current == end) {
             clearInterval(timer);
         }
