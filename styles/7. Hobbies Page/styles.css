@@ -8,8 +8,8 @@
   
   #hobbies-section .hobbies-info-div {
     width: 100%;
-    height: 100%;
-    background-color: white;
+    min-height: 100vh;
+    background-color: rgb(250, 250, 250);
     overflow: hidden;
   }
 
@@ -19,7 +19,7 @@
 
   #hobbies-section .hobbies-info-div .hobbies-info-container {
     width: 100%;
-    height: 100%;
+    min-height: 100vh;
     background-color: black;
     overflow: hidden;
   }
