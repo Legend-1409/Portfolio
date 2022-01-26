@@ -330,6 +330,11 @@ body {
 }
 
 @media screen and (max-width: 700px) {
+  #about-me-section .about-info-container .about-me-h1 h1 {
+  font-size: 70px;
+
+  }
+
   #about-me-section .about-details-div .my-photo-div {
     display: none;
   }
