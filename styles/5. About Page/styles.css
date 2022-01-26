@@ -11,7 +11,7 @@ body {
 
 #about-me-section .about-info-div {
   width: 100%;
-  height: 100%;
+  min-height: 100vh;
   background-color: rgb(250, 250, 250);
   position: absolute;
   transform: translateY(-100%);
@@ -34,6 +34,7 @@ body {
   justify-content: center;
   align-items: center;
   box-shadow: 0 0 100px 10px black;
+  overflow: hidden;
 }
 
 #about-me-section .about-info-container .about-me-h1 h1 {
@@ -51,9 +52,11 @@ body {
 
 #about-me-section .about-info-container .about-A-background {
   width: 100%;
+  /* min-height: 100vh; */
   height: 100%;
   position: absolute;
   z-index: -1;
+  overflow: hidden;
 }
 
 #about-me-section .about-info-container .about-A-background img{
