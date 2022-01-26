@@ -23,6 +23,7 @@
 
 #skills-section .skills-info-div .navbar {
   z-index: 100;
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 #skills-section .skills-info-div .skills-info-container {
@@ -53,12 +54,12 @@
   .skills-info-container
   .skills-dust-background
   video {
-    position: absolute;
-    width: 100%;
-    height: 100vh;
-    object-fit: cover;
-    top: 0;
-    left: 0;
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  top: 0;
+  left: 0;
 }
 
 #skills-section .skills-info-container .my-skill-h1 {
@@ -132,21 +133,29 @@
 }
 
 #skills-section .skills-details-div {
-  width: 100%;
+  position: absolute;
+  min-width: 100vw;
   min-height: 100vh;
   background-color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  padding: 0 5% 100px 5%;
+  display: grid;
+  grid-template-rows: 200px minmax(350px, auto);
+  grid-template-columns: repeat(2, minmax(400px, 1fr));
+  grid-template-areas:
+    "heading heading"
+    "software personal";
   overflow: hidden;
-  padding: 0 70px;
+  row-gap: 20px;
+  column-gap: 20px;
 }
 
 #skills-section .skills-details-div .skills-top-heading-div {
   width: 100%;
-  text-align: center;
+  grid-area: heading;
   margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
   opacity: 0;
   animation: topHeadingDivSlideBottom 1s linear 1s forwards;
 }
@@ -167,21 +176,14 @@
   }
 }
 
-#skills-section .skills-details-div .skills-chart-div {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  min-height: 50%;
-}
-
-#skills-section .skills-details-div .skills-chart-div .software-skill,
+#skills-section .skills-details-div .software-skill,
 .personal-skill {
-  width: 50%;
+  width: 100%;
   height: 100%;
 }
 
-#skills-section .skills-details-div .skills-chart-div .software-skill {
+#skills-section .skills-details-div .software-skill {
+  grid-area: software;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -200,16 +202,13 @@
   }
 }
 
-#skills-section .skills-details-div .skills-chart-div h3 {
+#skills-section .skills-details-div h3 {
   font-size: 28px;
   opacity: 0.8;
   font-weight: 500;
 }
 
-#skills-section
-  .skills-details-div
-  .skills-chart-div
-  .software-skill-chart-div {
+#skills-section .skills-details-div .software-skill-chart-div {
   margin-top: 15px;
   display: flex;
   flex-direction: column;
@@ -220,16 +219,15 @@
 
 #skills-section
   .skills-details-div
-  .skills-chart-div
   .software-skill-chart-div
   .software-skill-number {
   margin: 10px 0;
-  width: 70%;
+  padding: 0 10px 0 0;
+  width: 100%;
 }
 
 #skills-section
   .skills-details-div
-  .skills-chart-div
   .software-skill-chart-div
   .software-skill-number
   h5 {
@@ -240,7 +238,6 @@
 
 #skills-section
   .skills-details-div
-  .skills-chart-div
   .software-skill-chart-div
   .software-skill-number
   .software-skill-progress-bar-outer {
@@ -253,7 +250,6 @@
 }
 
 #skills-section
-  .skills-chart-div
   .software-skill-chart-div
   .software-skill-number
   .software-skill-progress-bar-inner {
@@ -263,7 +259,6 @@
 }
 
 #skills-section
-  .skills-chart-div
   .software-skill-chart-div
   .software-skill-number:nth-child(1)
   .software-skill-progress-bar-inner {
@@ -280,7 +275,6 @@
 }
 
 #skills-section
-  .skills-chart-div
   .software-skill-chart-div
   .software-skill-number:nth-child(2)
   .software-skill-progress-bar-inner {
@@ -297,7 +291,6 @@
 }
 
 #skills-section
-  .skills-chart-div
   .software-skill-chart-div
   .software-skill-number:nth-child(3)
   .software-skill-progress-bar-inner {
@@ -314,7 +307,6 @@
 }
 
 #skills-section
-  .skills-chart-div
   .software-skill-chart-div
   .software-skill-number:nth-child(4)
   .software-skill-progress-bar-inner {
@@ -331,7 +323,6 @@
 }
 
 #skills-section
-  .skills-chart-div
   .software-skill-chart-div
   .software-skill-number:nth-child(5)
   .software-skill-progress-bar-inner {
@@ -347,7 +338,8 @@
   }
 }
 
-#skills-section .skills-details-div .skills-chart-div .personal-skill {
+#skills-section .skills-details-div .personal-skill {
+  grid-area: personal;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -366,31 +358,19 @@
   }
 }
 
-#skills-section
-  .skills-details-div
-  .skills-chart-div
-  .personal-skill
-  .personal-skill-chart-div {
+#skills-section .skills-details-div .personal-skill .personal-skill-chart-div {
   width: 100%;
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  margin-top: 50px;
+  margin-top: 75px;
 }
 
-#skills-section
-  .skills-details-div
-  .skills-chart-div
-  .personal-skill
-  .personal-skill-number {
+#skills-section .skills-details-div .personal-skill .personal-skill-number {
   margin-left: 40px;
 }
 
-#skills-section
-  .skills-details-div
-  .skills-chart-div
-  .personal-skill
-  .circle-wrap {
+#skills-section .skills-details-div .personal-skill .circle-wrap {
   width: 100px;
   height: 100px;
   background: rgb(177, 176, 176);
@@ -398,39 +378,20 @@
   margin: auto;
 }
 
-#skills-section
-  .skills-details-div
-  .skills-chart-div
-  .personal-skill
-  .circle-wrap
-  .circle
-  .mask,
-#skills-section
-  .skills-details-div
-  .skills-chart-div
-  .personal-skill
-  .circle-wrap
-  .circle
-  .fill {
+#skills-section .skills-details-div .personal-skill .circle-wrap .circle .mask,
+#skills-section .skills-details-div .personal-skill .circle-wrap .circle .fill {
   width: 100px;
   height: 100px;
   position: absolute;
   border-radius: 50%;
 }
 
-#skills-section
-  .skills-details-div
-  .skills-chart-div
-  .personal-skill
-  .circle-wrap
-  .circle
-  .mask {
+#skills-section .skills-details-div .personal-skill .circle-wrap .circle .mask {
   clip: rect(0px, 100px, 100px, 50px);
 }
 
 #skills-section
   .skills-details-div
-  .skills-chart-div
   .personal-skill
   .circle-wrap
   .inside-circle {
@@ -448,25 +409,18 @@
   font-size: 23px;
 }
 
-#skills-section
-  .skills-details-div
-  .skills-chart-div
-  .personal-skill
-  .mask
-  .fill {
+#skills-section .skills-details-div .personal-skill .mask .fill {
   clip: rect(0px, 50px, 100px, 0px);
   background-color: black;
 }
 
 #skills-section
   .skills-details-div
-  .skills-chart-div
   .personal-skill
   .personal-skill-number-1
   .mask.full,
 #skills-section
   .skills-details-div
-  .skills-chart-div
   .personal-skill
   .personal-skill-number-1
   .circle
@@ -485,13 +439,11 @@
 
 #skills-section
   .skills-details-div
-  .skills-chart-div
   .personal-skill
   .personal-skill-number-2
   .mask.full,
 #skills-section
   .skills-details-div
-  .skills-chart-div
   .personal-skill
   .personal-skill-number-2
   .circle
@@ -510,13 +462,11 @@
 
 #skills-section
   .skills-details-div
-  .skills-chart-div
   .personal-skill
   .personal-skill-number-3
   .mask.full,
 #skills-section
   .skills-details-div
-  .skills-chart-div
   .personal-skill
   .personal-skill-number-3
   .circle
@@ -533,10 +483,62 @@
   }
 }
 
-#skills-section .skills-chart-div .personal-skill .personal-skill-bar-topic {
+#skills-section .personal-skill .personal-skill-bar-topic {
   margin-top: 20px;
   text-align: center;
   color: rgba(0, 0, 0, 0.6);
   font-size: 18px;
   font-weight: 400;
+}
+
+@media screen and (max-width: 1000px) {
+  #skills-section .skills-details-div {
+    grid-template-rows: 200px repeat(2, minmax(350px, auto));
+    grid-template-columns: repeat(1, minmax(400px, 1fr));
+    grid-template-areas:
+      "heading"
+      "software" 
+      "personal";
+  }
+
+  #skills-section
+  .skills-details-div
+  .software-skill-chart-div
+  .software-skill-number {
+    width: 70%;
+  }
+
+  #skills-section .skills-details-div .personal-skill .personal-skill-number {
+    margin-left: 60px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #skills-section
+  .skills-details-div
+  .software-skill-chart-div
+  .software-skill-number {
+    width: 100%;
+  }
+
+  #skills-section .skills-details-div .personal-skill .personal-skill-number {
+    margin-left: 40px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #skills-section .skills-details-div .personal-skill .personal-skill-number {
+    margin-left: 0px;
+    margin-bottom: 50px;
+  }
+
+  #skills-section .skills-details-div .personal-skill .personal-skill-heading-div {
+    width: 100%;
+    text-align: center;
+  }
+
+  #skills-section .skills-details-div .personal-skill .personal-skill-chart-div {
+    margin-top: 35px;
+    flex-direction: column;
+  }
 }
