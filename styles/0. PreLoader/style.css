@@ -1,0 +1,37 @@
+#preLoader {
+  /* position: absolute; */
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  min-height: 100vh;
+  display: none;
+  background: #042331;
+}
+
+#preLoader.is-active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#preLoader svg {
+  height: 100px;
+  width: 100px;
+}
+
+#preLoader rect {
+  width: 100px;
+  height: 100px;
+  fill: none;
+  stroke-width: 100px;
+  stroke: #00adff;
+  stroke-dasharray: 100;
+  stroke-dashoffset: 50%;
+  animation: preLoaderanimate 2s linear infinite;
+}
+
+@keyframes preLoaderanimate {
+  to {
+    stroke-dashoffset: 250%;
+  }
+}
