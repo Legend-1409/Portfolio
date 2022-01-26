@@ -12,3 +12,18 @@ hobbiesSectionScrollClickButtonDown.addEventListener('click', ()=> {
         hobbiesInfoContainer.classList.remove('active');
     }, 800);
 });
+
+window.addEventListener('scroll', ()=> {
+    let scrolledBy = window.scrollY;
+    if(!hobbiesDetailsDiv.classList.contains('invisible'))
+    {
+        if(scrolledBy >= 210)
+        {
+            document.documentElement.style.setProperty('--navbarColor', 'black');
+        }
+        else
+        {
+            document.documentElement.style.setProperty('--navbarColor', 'white');
+        }
+    }
+})
