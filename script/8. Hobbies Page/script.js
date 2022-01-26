@@ -1,6 +1,7 @@
 let hobbiesSectionScrollClickButtonDown = document.querySelector('#hobbies-section .scroll-click');
 let hobbiesInfoContainer = document.querySelector('#hobbies-section .hobbies-info-container');
 let hobbiesDetailsDiv = document.querySelector('#hobbies-section .hobbies-details-div');
+let hobbiesSection = document.querySelector('#hobbies-section');
 
 
 hobbiesSectionScrollClickButtonDown.addEventListener('click', ()=> {
@@ -17,7 +18,7 @@ let hobbiesNavbar1 = document.querySelector('#hobbies-section .navbar');
 
 window.addEventListener('scroll', ()=> {
     let scrolledBy = window.scrollY;
-    if(!hobbiesDetailsDiv.classList.contains('invisible'))
+    if(!hobbiesSection.classList.contains('invisible'))
     {
         if(scrolledBy >= 210)
         {
