@@ -132,7 +132,7 @@
         display: none;
     }
     100% {
-      width: 250px;
+      width: 200px;
       display: flex;
     }
 }
@@ -169,6 +169,10 @@
 
   .navbar .navbar-burger-div {
     display: flex;
+  }
+
+  .navbar-right {
+    padding: 40px 50px 40px 10px;
   }
 }
 
