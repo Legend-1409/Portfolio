@@ -13,6 +13,8 @@ hobbiesSectionScrollClickButtonDown.addEventListener('click', ()=> {
     }, 800);
 });
 
+let hobbiesNavbar1 = document.querySelector('#hobbies-section .navbar');
+
 window.addEventListener('scroll', ()=> {
     let scrolledBy = window.scrollY;
     if(!hobbiesDetailsDiv.classList.contains('invisible'))
@@ -20,10 +22,12 @@ window.addEventListener('scroll', ()=> {
         if(scrolledBy >= 210)
         {
             document.documentElement.style.setProperty('--navbarColor', 'black');
+            hobbiesNavbar1.style.backgroundColor = 'rgba(0,0,0,0.1)';
         }
         else
         {
             document.documentElement.style.setProperty('--navbarColor', 'white');
+            hobbiesNavbar1.style.backgroundColor = 'transparent';
         }
     }
 })
